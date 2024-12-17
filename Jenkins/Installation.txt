@@ -1,0 +1,33 @@
+## Step by step to install Jenkins on Ubantu 
+## Prerequirement Java Jre and Jdk
+1. sudo apt update
+2. sudo java -version
+3. sudo apt install default-Jre
+4. sudo apt install default-Jdk
+5. sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \  https://pkg.jenkins.io/debian/jenkins.io-2023.key
+6. echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \   https://pkg.jenkins.io/debian binary/ | sudo tee \  /etc/apt/sources.list.d/jenkins.list > /dev/null
+7. sudo apt update
+8. sudo apt install jenkins
+
+## Package will get installed , check Jenkins service are running
+
+9. systemctl status jenkins
+
+## If the service is active , we successfully install jenkins but if the service is inactive then run command to start jenkins service.
+10. sudo systemctl enable jenkins
+11. sudo systemctl start jenkins
+12. sudo systemctl status jenkins
+
+
+##If everything has been set up correctly, you should see an output like this:
+## Loaded: loaded (/lib/systemd/system/jenkins.service; enabled; vendor preset: enabled)
+Active: active (running) since Tue 2023-06-22 16:19:01 +03; 4min 57s ago
+
+## To access Jenkins
+1. open browser and enter http://localhost:8080 
+2. Unlock jenkins page opens then on ubantu server navigate to or type cat /var/lib/jenkins/secrets/initialAdminPassword 
+3. copy  the Administrator password and paste it 
+4. click Continue
+5. Setup the log in account for the first time.
+
+
