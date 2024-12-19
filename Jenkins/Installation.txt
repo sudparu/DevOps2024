@@ -30,4 +30,11 @@ Active: active (running) since Tue 2023-06-22 16:19:01 +03; 4min 57s ago
 4. click Continue
 5. Setup the log in account for the first time.
 
+#####################################################################
+runing jenkins pipeline to build docker image 
+if it failed due to permission issue , grand permission on the ubantu instant
 
+sudo usermod -aG docker jenkins
+sudo service jenkins restart
+
+################################################################
